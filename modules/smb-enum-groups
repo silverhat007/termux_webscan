@@ -1,0 +1,18 @@
+#!/bin/sh
+
+clear
+
+figlet SMB
+figlet ENUM
+figlet GROUPS
+echo ""
+
+echo -n "[*] Masukan Url : "
+read a
+if [ ! -z $a ]
+then
+echo "[*] Scanning... "
+nmap -p445 --script smb-enum-groups $a
+else
+echo "[!] Url Belum Dimasukan! "
+fi

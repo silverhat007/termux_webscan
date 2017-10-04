@@ -1,0 +1,19 @@
+#!/bin/sh
+#bismillah
+
+clear
+
+
+figlet REVERSE
+figlet INDEX
+echo ""
+
+echo -n "[*] Masukan Url : "
+read a
+if [ ! -z $a ]
+then
+echo "[*] Scanning... "
+nmap -sV --script=reverse-index $a
+else
+echo "[!] Url Belum Di Masukan! "
+fi

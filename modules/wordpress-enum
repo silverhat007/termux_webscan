@@ -1,0 +1,18 @@
+#!/bin/sh
+
+clear
+
+figlet HTTP
+figlet WORDPRESS
+figlet ENUM
+echo ""
+
+echo -n "[*] Masukan Url : "
+read asu
+if [ ! -z $asu ]
+then
+echo "[*] Scanning... "
+nmap -p 80 -sV --script=http-wordpress-enum $asu
+else
+echo "[!] Url Belum Di Masukan! "
+fi

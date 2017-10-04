@@ -1,0 +1,86 @@
+#!/data/data/com.termux/files/usr/bin/bash
+#bismillah
+
+clear
+echo "+-----------------------+";
+echo "|                       |";
+echo "|Port Scanning Not Crime|";
+echo "|     WEB SCANNING      |";
+echo "|  BlackHole Progaming  |";
+echo "|                       |";
+echo "+-----------------------+";
+echo " "
+echo " [01] BANNER ";
+echo " [02] DNSBRUTE ";
+echo " [03] FILEUPLOAD EXPLOITER ";
+echo " [04] FIREWALK"
+echo " [05] GENERATOR"
+echo " [06] HTTP METHODS "
+echo " [07] REVERSE INDEX"
+echo " [08] ROBOTS.TXT"
+echo " [09] SITEMAP"
+echo " [10] SPIDER"
+echo " [11] TRACEROUTE"
+echo " [12] USERDIR-ENUM"
+echo " [13] WHOIS DOMAIN"
+echo " [14] WHOIS IP"
+echo " [15] WORDPRESS ENUM"
+echo " [16] WORDPRESS USERS"
+echo " [99] EXIT "
+echo ""
+read -p " PILIHAN ANDA [01-99] : " pil;
+if [ $pil -eq 01 ];
+then
+./modules/banner
+elif [ $pil -eq 02 ];
+then
+./modules/dnsbrute
+elif [ $pil -eq 03 ];
+then
+./modules/fileupload-exploiter
+elif [ $pil -eq 04 ]
+then
+./modules/firewalk;
+elif [ $pil -eq 05 ];
+then
+./modules/generator
+elif [ $pil -eq 06 ];
+then
+./modules/http-methods
+elif [ $pil -eq 07 ];
+then
+./modules/reverse-index
+elif [ $pil -eq 08 ];
+then
+./modules/robots-txt
+elif [ $pil -eq 09 ];
+then
+./modules/sitemap
+elif [ $pil -eq 10 ];
+then
+./modules/spider
+elif [ $pil -eq 11 ];
+then
+./modules/traceroute
+elif [ $pil -eq 12 ];
+then
+./modules/userdir-enum
+elif [ $pil -eq 13 ];
+then
+./modules/whois-domain
+elif [ $pil -eq 14 ];
+then
+./modules/whois-ip
+elif [ $pil -eq 15 ];
+then
+./modules/wordpress-enum
+elif [ $pil -eq 16 ];
+then
+./modules/wordpress-users
+elif [ $pil -eq 99 ];
+then
+exit
+else
+echo "Sory, Tidak Tersedia!"
+exit
+fi

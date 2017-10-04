@@ -1,0 +1,60 @@
+#!/data/data/com.termux/files/usr/bin/bash
+#bismillah
+
+
+clear
+
+echo "+-----------------------+"
+echo "|                       |"
+echo "|Port Scanning Not Crime|"
+echo "|     SMB SCANNING      |"
+echo "| BlackHole Progamming  |"
+echo "|                       |"
+echo "+-----------------------+"
+echo ""
+echo " [01] SMB BRUTE "
+echo " [02] SMB DOUBLE PULSAR BACKDOOR "
+echo " [03] SMB ENUM DOMAINS "
+echo " [04] SMB ENUM GROUPS "
+echo " [05] SMB ENUM PROCESSES "
+echo " [06] SMB ENUM SESSIONS "
+echo " [07] SMB ENUM  USERS "
+echo " [08] SMB SECURITY MODE "
+echo " [09] SMB SYSTEM INFO "
+echo " [99] EXIT "
+echo " "
+read -p "PILIHAN ANDA [01-99] : " pil
+if [ $pil -eq 01 ] ;
+then
+./modules/smb-brute
+elif [ $pil -eq 02 ] ;
+then
+./modules/smb-double-pulsar-backdoor ] ;
+elif [ $pil -eq 03 ] ;
+then
+./modules/smb-enum-domains
+elif [ $pil -eq 04 ] ;
+then
+./modules/smb-enum-groups
+elif [ $pil -eq 05 ] ;
+then
+./modules/smb-enum-processes
+elif [ $pil -eq 06 ] ;
+then
+./modules/smb-enum-sessions
+elif [ $pil -eq 07 ] ;
+then
+./modules/smb-enum-users
+elif [ $pil -eq 08 ] ;
+then
+./modules/smb-security-mode
+elif [ $pil -eq 09 ] ;
+then
+./modules/smb-system-info
+elif [ $pil -eq 99 ] ;
+then
+exit
+else
+echo "Sory ,Tidak Tersedia! "
+exit
+fi

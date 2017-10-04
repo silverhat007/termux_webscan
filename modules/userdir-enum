@@ -1,0 +1,15 @@
+#!/bin/sh
+
+clear
+
+figlet userdir-enum
+echo ""
+echo -n "[*] Masukan Url : "
+read a
+if [ ! -z $a ]
+then
+echo "[*] Scanning... "
+nmap -p80 --script=http-userdir-enum $a
+else
+echo "[!] Url Belum Di Masukan! "
+fi

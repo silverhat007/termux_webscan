@@ -1,0 +1,18 @@
+#!/bin/sh
+
+clear
+
+figlet HTTP
+figlet WORDPRESS
+figlet USERS
+echo ""
+
+echo -n "[*] Masukan Url : "
+read a
+if [ ! -z $a ]
+then
+echo "[*] Scanning..."
+nmap -p80 --script=http-wordpress-users $a
+else
+echo "[!] Url Belum Di Masukan! "
+fi

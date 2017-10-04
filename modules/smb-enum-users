@@ -1,0 +1,20 @@
+#!/bin/sh
+
+clear
+
+
+figlet SMB
+figlet ENUM
+figlet USERS
+echo ""
+
+
+echo -n "[*]Masukan Url : "
+read b
+if [ ! -z $b ]
+then
+echo "[*] Scanning... "
+nmap -p 445 --script smb-enum-users $b
+else
+echo "[!] Url Belum Dimasukan!"
+fi

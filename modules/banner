@@ -1,0 +1,28 @@
+#!/bin/sh
+#bimillah
+
+clear
+
+
+echo ""
+echo -e "\033[31m ██     ██████ ██████ ██████ ██████ ██████\033[0m"
+echo -e "\033[31m ██         ██ ██  ██ ██  ██ ██     ██\033[0m"
+echo -e "\033[31m ██████ ██████ ██  ██ ██  ██ ██████ ██\033[0m"
+echo -e "\033[31m ██  ██ ██  ██ ██  ██ ██  ██ ██     ██\033[0m"
+echo -e "\033[31m ██████ ██████ ██  ██ ██  ██ ██████ ██\033[0m"
+echo "######################################"
+echo " Author : 7grok "
+echo " Tool   : banner "
+echo "######################################"
+
+echo ""
+
+echo -n "[*] Masukan Url : "
+read goblok
+if [ ! -z $goblok ]
+then
+echo "[*] Scanning... "
+nmap --script=banner $goblok
+else
+echo "[!] Url Belum Di Masukan! "
+fi

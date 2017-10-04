@@ -1,0 +1,16 @@
+#!/bin/sh
+
+clear
+
+cowsay -f eyes need root access
+echo ""
+
+echo -n "[*] Masukan Ip : "
+read a
+if [ ! -z $a ]
+then
+echo "[*] Scanning... "
+sudo nmap -sV -O --script whois-ip $a
+else
+echo "[!] Ip Addreass Belum Di Masukan! "
+fi

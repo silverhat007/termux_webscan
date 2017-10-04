@@ -1,0 +1,47 @@
+#!/bin/sh
+#bismillah
+
+
+clear
+
+echo -e "\033[31m    .o oooooooo                               ooooooo.\033[0m"
+echo -e "\033[31m   . oooooo  oooo.        oooo               .adcooooooo\033[0m"
+echo -e "\033[31m   oboo''''''''''''.ooo. .ooooo.   .ooooooo. .oooooooooo.\033[0m"
+echo -e "\033[31m   oop.ooooooooooooo 'oooooooooo  .adoooooo' ooooooooob'\033[0m"
+echo -e "\033[31m   'ooooooo'    'oooooooooooooooooooooooooooo'   'oooooo'\033[0m"
+echo -e "\033[31m     oooo'         'oooooooooooooooooooooo'        'oooo\033[0m"
+echo -e "\033[31m     oo.o            'oooooooooooooooooo'           .ooo\033[0m"
+echo -e "\033[31m     .oo                ^'oooooooooo'^               oo.\033[0m"
+echo -e "\033[31m    oooba.              .adoooooooba               .adoo.\033[0m"
+echo -e "\033[31m   oooooooooba.    .adoooooooo@^oooooooba.     .adoocooooo\033[0m"
+echo -e "\033[31m  oooooooooooo.ooooooooooooo^'  '^oooooooooooo.oooooooooooo\033[0m"
+echo -e "\033[31m  ^oooo^        ^yoooomooo^'  .   '^ooooooooo.        ^oooo^\033[0m"
+echo -e "\033[31m    y             'ooooooo' .oooo.  'oooooooooo.          :'  \033[0m"
+echo -e "\033[31m    :              .oooooo'.oooooooo.'ooooooo'            .\033[0m"
+echo -e "\033[31m    .               'ooooooooooooooooooooooo'  \033[0m"
+echo -e "\033[31m                    '%o   oooo  %ooo%  ooooo' \033[0m"
+echo -e "\033[31m                     '$   0oo0  'ooo'  o.ooo' \033[0m"
+echo -e "\033[31m "
+echo -e "\033[31m                     '$   0oo0  'ooo'  o.ooo' \033[0m"
+echo -e "\033[31m                    '%o   oooo  %ooo%  ooooo' \033[0m"
+echo -e "\033[31m                    'ooooooooooooooooooobaoo' \033[0m"
+echo -e "\033[31m                    'bappppoooooooopppbaaaab' \033[0m"
+echo -e "\033[31m                    'oooooooooooppppppoooooo' \033[0m"
+echo " "
+echo " "
+echo "#############################################################"
+echo " Author : 7grok "
+echo " Tools  : scanning robots.txt "
+echo "#############################################################"
+
+echo " "
+echo -n "[*] Masukan Url : "
+
+	read anu
+if [ ! -z $anu ]
+then
+echo "[*] Scanning... "
+nmap -sV -p80 --script=http-robots.txt $anu
+	else
+echo "[!] Url Belum Di Masukan!"
+fi

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+clear
+
+cowsay -f stegosaurus 7gork
+echo ""
+
+echo -n "[*] Masukan Url : "
+read dancok
+if [ ! -z $dancok ]
+then
+echo "[*] Scanning..."
+nmap -p 445 --script smb-double-pulsar-backdoor.nse $dancok
+else
+echo "[!] Url Belum Dimasukan! "
+fi

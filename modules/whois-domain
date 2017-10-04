@@ -1,0 +1,31 @@
+#!/bin/sh
+#myinfo
+
+clear
+
+
+echo  ""
+echo -e "\033[31m ██     ██ ██     ██████ ██ ██████\033[0m"
+echo -e "\033[31m ██     ██ ██     ██  ██ ██ ██\033[0m"
+echo -e "\033[31m ██  █  ██ ██████ ██  ██ ██ ██████\033[0m"
+echo -e "\033[31m ██ ███ ██ ██  ██ ██  ██ ██     ██\033[0m"
+echo -e "\033[31m  ███ ███  ██  ██ ██████ ██ ██████\033[0m"
+echo -e ""
+echo -e ""
+echo " ########################################"
+echo -e "\033[31m author : 7grok \033[0m"
+echo -e "\033[31m tools  : whois domain \033[0m"
+echo " ########################################"
+
+echo " "
+
+echo -n "[*] Masukan Url : "
+read anu
+	if [ ! -z $anu ]
+then
+echo "[*] Scanning... "
+
+	nmap -sV --script=whois-domain $anu
+else
+echo "[!] Url Belum Di Masukan!"
+fi

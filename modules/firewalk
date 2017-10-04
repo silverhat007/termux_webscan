@@ -1,0 +1,26 @@
+#!/bin/sh
+#bismillah
+clear
+
+echo ""
+echo -e "\033[31m ██████ ██ ██████ ██████ ██   ██ ██████ ██     ██  ██ \033[0m"
+echo -e "\033[31m ██     ██ ██     ██     ██   ██     ██ ██     ██ ██  \033[0m"
+echo -e "\033[31m ██████ ██ ██     ██████ ██ █ ██ ██████ ██     ████   \033[0m"
+echo -e "\033[31m ██     ██ ██     ██     ███████ ██  ██ ██     ██ ██  \033[0m"
+echo -e "\033[31m ██     ██ ██     ██████ ███ ███ ██████ ██████ ██  ██ \033[0m"
+echo "###################################################################"
+echo " Author   : 7grok    "
+echo " Tools    : firewalk "
+echo " Warning! : THIS TOOL NEED ROOT ACCESS "
+echo "###################################################################"
+
+
+echo -n "[*] Masukan Url : "
+read anu
+if [ ! -z $anu ]
+then
+echo "[*] Scanning..."
+sudo nmap --script=firewalk --traceroute --script-args=firewalk.max-retries=1 -sV $anu
+else
+echo "[!] Url Belum Di Masukan! "
+fi

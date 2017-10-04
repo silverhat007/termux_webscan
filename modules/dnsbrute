@@ -1,0 +1,30 @@
+#!/bin/sh
+#bismillah
+
+clear
+
+	echo -e " \033[31m #################################################\033[0m "
+	echo -e " \033[31m # This tool using nse script                    #\033[0m "
+	echo -e " \033[31m # persetan tak usah pakai ini tools             #\033[0m "
+	echo -e " \033[31m # persetan yang datang dan pergi sesuka hati :D #\033[0m "
+	echo -e " \033[31m # gethering the website                         #\033[0m "
+	echo -e " \033[31m #################################################\033[0m "
+	echo "        ##############################"
+	echo "        # THIS TOOL NEED ACCESS ROOT #"
+	echo "        # visit http://nmap.org      #"
+	echo "        ##############################"
+	echo " "
+echo -n "[*] Masukan Url : "
+read anu
+if [ ! -z $anu ]
+then
+echo "[*] Scanning..."
+sudo nmap -O -sV --open -O --script=dns-brute $anu
+
+else
+
+	echo "[*] Url Belum Di Masukan! "
+
+fi
+
+
